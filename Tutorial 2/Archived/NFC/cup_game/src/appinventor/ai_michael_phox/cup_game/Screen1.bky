@@ -1,0 +1,567 @@
+<xml>
+  <block type="component_event" x="-188" y="-1200">
+    <mutation component_type="Button" instance_name="BallButton" event_name="Click"></mutation>
+    <title name="COMPONENT_SELECTOR">BallButton</title>
+    <statement name="DO">
+      <block type="component_set_get" inline="false">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="InstructionLabel"></mutation>
+        <title name="COMPONENT_SELECTOR">InstructionLabel</title>
+        <title name="PROP">Text</title>
+        <value name="VALUE">
+          <block type="lexical_variable_get">
+            <title name="VAR">global SetupInstruction2Text</title>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" inline="false">
+            <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+            <title name="COMPONENT_SELECTOR">Image1</title>
+            <title name="PROP">Picture</title>
+            <value name="VALUE">
+              <block type="lexical_variable_get">
+                <title name="VAR">global BallPic</title>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" inline="false">
+                <mutation component_type="NearField" set_or_get="set" property_name="ReadMode" is_generic="false" instance_name="NearField1"></mutation>
+                <title name="COMPONENT_SELECTOR">NearField1</title>
+                <title name="PROP">ReadMode</title>
+                <value name="VALUE">
+                  <block type="logic_boolean">
+                    <title name="BOOL">FALSE</title>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" inline="false">
+                    <mutation component_type="NearField" set_or_get="set" property_name="TextToWrite" is_generic="false" instance_name="NearField1"></mutation>
+                    <title name="COMPONENT_SELECTOR">NearField1</title>
+                    <title name="PROP">TextToWrite</title>
+                    <value name="VALUE">
+                      <block type="lexical_variable_get">
+                        <title name="VAR">global NFCBallText</title>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" x="438" y="-1199">
+    <mutation component_type="Form" instance_name="Screen1" event_name="Initialize"></mutation>
+    <title name="COMPONENT_SELECTOR">Screen1</title>
+    <statement name="DO">
+      <block type="component_set_get" inline="false">
+        <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+        <title name="COMPONENT_SELECTOR">Image1</title>
+        <title name="PROP">Picture</title>
+        <value name="VALUE">
+          <block type="lexical_variable_get">
+            <title name="VAR">global QuestionPic</title>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" inline="false">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="ResultsLabel"></mutation>
+            <title name="COMPONENT_SELECTOR">ResultsLabel</title>
+            <title name="PROP">Text</title>
+            <value name="VALUE">
+              <block type="text">
+                <title name="TEXT"></title>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" inline="false">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="InstructionLabel"></mutation>
+                <title name="COMPONENT_SELECTOR">InstructionLabel</title>
+                <title name="PROP">Text</title>
+                <value name="VALUE">
+                  <block type="lexical_variable_get">
+                    <title name="VAR">global SetupInstruction1Text</title>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" inline="false" x="1412" y="-1200">
+    <title name="NAME">NFCBallText</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">ball</title>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" inline="false" x="1412" y="-1150">
+    <title name="NAME">SetupInstruction2Text</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">Hold the phone over one of the tags</title>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" x="-188" y="-1033">
+    <mutation component_type="Button" instance_name="CupButton" event_name="Click"></mutation>
+    <title name="COMPONENT_SELECTOR">CupButton</title>
+    <statement name="DO">
+      <block type="component_set_get" inline="false">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="InstructionLabel"></mutation>
+        <title name="COMPONENT_SELECTOR">InstructionLabel</title>
+        <title name="PROP">Text</title>
+        <value name="VALUE">
+          <block type="lexical_variable_get">
+            <title name="VAR">global SetupInstruction2Text</title>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" inline="false">
+            <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+            <title name="COMPONENT_SELECTOR">Image1</title>
+            <title name="PROP">Picture</title>
+            <value name="VALUE">
+              <block type="lexical_variable_get">
+                <title name="VAR">global CupPic</title>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" inline="false">
+                <mutation component_type="NearField" set_or_get="set" property_name="ReadMode" is_generic="false" instance_name="NearField1"></mutation>
+                <title name="COMPONENT_SELECTOR">NearField1</title>
+                <title name="PROP">ReadMode</title>
+                <value name="VALUE">
+                  <block type="logic_boolean">
+                    <title name="BOOL">FALSE</title>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" inline="false">
+                    <mutation component_type="NearField" set_or_get="set" property_name="TextToWrite" is_generic="false" instance_name="NearField1"></mutation>
+                    <title name="COMPONENT_SELECTOR">NearField1</title>
+                    <title name="PROP">TextToWrite</title>
+                    <value name="VALUE">
+                      <block type="lexical_variable_get">
+                        <title name="VAR">global NFCCupText</title>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" inline="false" x="1412" y="-1100">
+    <title name="NAME">SetupInstruction1Text</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">Choose Place Cup or Place Bal to get started</title>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" x="440" y="-1047">
+    <mutation component_type="NearField" instance_name="NearField1" event_name="TagWritten"></mutation>
+    <title name="COMPONENT_SELECTOR">NearField1</title>
+    <statement name="DO">
+      <block type="component_set_get" inline="false">
+        <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+        <title name="COMPONENT_SELECTOR">Image1</title>
+        <title name="PROP">Picture</title>
+        <value name="VALUE">
+          <block type="lexical_variable_get">
+            <title name="VAR">global QuestionPic</title>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" inline="false">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="InstructionLabel"></mutation>
+            <title name="COMPONENT_SELECTOR">InstructionLabel</title>
+            <title name="PROP">Text</title>
+            <value name="VALUE">
+              <block type="lexical_variable_get">
+                <title name="VAR">global SetupInstruction3Text</title>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" inline="false">
+                <mutation component_type="NearField" set_or_get="set" property_name="ReadMode" is_generic="false" instance_name="NearField1"></mutation>
+                <title name="COMPONENT_SELECTOR">NearField1</title>
+                <title name="PROP">ReadMode</title>
+                <value name="VALUE">
+                  <block type="logic_boolean">
+                    <title name="BOOL">TRUE</title>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" inline="false" x="1412" y="-1050">
+    <title name="NAME">SetupInstruction3Text</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">Press one of the buttons above to create another tag</title>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" inline="false" x="1412" y="-1000">
+    <title name="NAME">QuestionPic</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">questionmark.png</title>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" x="440" y="-917">
+    <mutation component_type="NearField" instance_name="NearField1" event_name="TagRead"></mutation>
+    <title name="COMPONENT_SELECTOR">NearField1</title>
+    <statement name="DO">
+      <block type="controls_if" inline="false">
+        <value name="IF0">
+          <block type="logic_negate" inline="false">
+            <value name="BOOL">
+              <block type="lexical_variable_get">
+                <title name="VAR">global SetupMode</title>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if" inline="false">
+            <mutation elseif="1" else="1"></mutation>
+            <value name="IF0">
+              <block type="text_compare" inline="true">
+                <title name="OP">EQUAL</title>
+                <value name="TEXT1">
+                  <block type="component_set_get">
+                    <mutation component_type="NearField" set_or_get="get" property_name="LastMessage" is_generic="false" instance_name="NearField1"></mutation>
+                    <title name="COMPONENT_SELECTOR">NearField1</title>
+                    <title name="PROP">LastMessage</title>
+                  </block>
+                </value>
+                <value name="TEXT2">
+                  <block type="lexical_variable_get">
+                    <title name="VAR">global NFCCupText</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_set_get" inline="false">
+                <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+                <title name="COMPONENT_SELECTOR">Image1</title>
+                <title name="PROP">Picture</title>
+                <value name="VALUE">
+                  <block type="lexical_variable_get">
+                    <title name="VAR">global CupPic</title>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" inline="false">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="ResultsLabel"></mutation>
+                    <title name="COMPONENT_SELECTOR">ResultsLabel</title>
+                    <title name="PROP">Text</title>
+                    <value name="VALUE">
+                      <block type="lexical_variable_get">
+                        <title name="VAR">global PlayResultFailureText</title>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="text_compare" inline="true">
+                <title name="OP">EQUAL</title>
+                <value name="TEXT1">
+                  <block type="component_set_get">
+                    <mutation component_type="NearField" set_or_get="get" property_name="LastMessage" is_generic="false" instance_name="NearField1"></mutation>
+                    <title name="COMPONENT_SELECTOR">NearField1</title>
+                    <title name="PROP">LastMessage</title>
+                  </block>
+                </value>
+                <value name="TEXT2">
+                  <block type="lexical_variable_get">
+                    <title name="VAR">global NFCBallText</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="component_set_get" inline="false">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="ResultsLabel"></mutation>
+                <title name="COMPONENT_SELECTOR">ResultsLabel</title>
+                <title name="PROP">Text</title>
+                <value name="VALUE">
+                  <block type="lexical_variable_get">
+                    <title name="VAR">global PlayResultVictoryText</title>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" inline="false">
+                    <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+                    <title name="COMPONENT_SELECTOR">Image1</title>
+                    <title name="PROP">Picture</title>
+                    <value name="VALUE">
+                      <block type="lexical_variable_get">
+                        <title name="VAR">global BallPic</title>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="component_set_get" inline="false">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="ResultsLabel"></mutation>
+                <title name="COMPONENT_SELECTOR">ResultsLabel</title>
+                <title name="PROP">Text</title>
+                <value name="VALUE">
+                  <block type="text_join" inline="false">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="lexical_variable_get">
+                        <title name="VAR">global PlayResultErrorText</title>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="component_set_get">
+                        <mutation component_type="NearField" set_or_get="get" property_name="LastMessage" is_generic="false" instance_name="NearField1"></mutation>
+                        <title name="COMPONENT_SELECTOR">NearField1</title>
+                        <title name="PROP">LastMessage</title>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" inline="false">
+                    <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+                    <title name="COMPONENT_SELECTOR">Image1</title>
+                    <title name="PROP">Picture</title>
+                    <value name="VALUE">
+                      <block type="lexical_variable_get">
+                        <title name="VAR">global QuestionPic</title>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" x="-190" y="-874">
+    <mutation component_type="Button" instance_name="SetupModeButton" event_name="Click"></mutation>
+    <title name="COMPONENT_SELECTOR">SetupModeButton</title>
+    <statement name="DO">
+      <block type="component_set_get" inline="false">
+        <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+        <title name="COMPONENT_SELECTOR">Image1</title>
+        <title name="PROP">Picture</title>
+        <value name="VALUE">
+          <block type="lexical_variable_get">
+            <title name="VAR">global QuestionPic</title>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" inline="false">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="ResultsLabel"></mutation>
+            <title name="COMPONENT_SELECTOR">ResultsLabel</title>
+            <title name="PROP">Text</title>
+            <value name="VALUE">
+              <block type="text">
+                <title name="TEXT"></title>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" inline="false">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="InstructionLabel"></mutation>
+                <title name="COMPONENT_SELECTOR">InstructionLabel</title>
+                <title name="PROP">Text</title>
+                <value name="VALUE">
+                  <block type="lexical_variable_get">
+                    <title name="VAR">global SetupInstruction1Text</title>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" inline="false">
+                    <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="SetupMenuArrangement"></mutation>
+                    <title name="COMPONENT_SELECTOR">SetupMenuArrangement</title>
+                    <title name="PROP">Visible</title>
+                    <value name="VALUE">
+                      <block type="logic_boolean">
+                        <title name="BOOL">TRUE</title>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="lexical_variable_set" inline="false">
+                        <title name="VAR">global SetupMode</title>
+                        <value name="VALUE">
+                          <block type="logic_boolean">
+                            <title name="BOOL">TRUE</title>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" inline="false" x="1412" y="-950">
+    <title name="NAME">CupPic</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">redcup.jpg</title>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" inline="false" x="1412" y="-900">
+    <title name="NAME">PlayInstructionText</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">Guess which tag hides the ball by holding the phone over one of them</title>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" inline="false" x="1411" y="-850">
+    <title name="NAME">PlayResultErrorText</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">I'm sorry, I don't recognize the tag that you've scanned, this tag said:   </title>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" inline="false" x="1415" y="-809">
+    <title name="NAME">NFCCupText</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">cup</title>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" x="-193" y="-692">
+    <mutation component_type="Button" instance_name="PlayModeButton" event_name="Click"></mutation>
+    <title name="COMPONENT_SELECTOR">PlayModeButton</title>
+    <statement name="DO">
+      <block type="component_set_get" inline="false">
+        <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+        <title name="COMPONENT_SELECTOR">Image1</title>
+        <title name="PROP">Picture</title>
+        <value name="VALUE">
+          <block type="lexical_variable_get">
+            <title name="VAR">global QuestionPic</title>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" inline="false">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="ResultsLabel"></mutation>
+            <title name="COMPONENT_SELECTOR">ResultsLabel</title>
+            <title name="PROP">Text</title>
+            <value name="VALUE">
+              <block type="text">
+                <title name="TEXT"></title>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" inline="false">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="InstructionLabel"></mutation>
+                <title name="COMPONENT_SELECTOR">InstructionLabel</title>
+                <title name="PROP">Text</title>
+                <value name="VALUE">
+                  <block type="lexical_variable_get">
+                    <title name="VAR">global PlayInstructionText</title>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" inline="false">
+                    <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="SetupMenuArrangement"></mutation>
+                    <title name="COMPONENT_SELECTOR">SetupMenuArrangement</title>
+                    <title name="PROP">Visible</title>
+                    <value name="VALUE">
+                      <block type="logic_boolean">
+                        <title name="BOOL">FALSE</title>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="lexical_variable_set" inline="false">
+                        <title name="VAR">global SetupMode</title>
+                        <value name="VALUE">
+                          <block type="logic_boolean">
+                            <title name="BOOL">FALSE</title>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" inline="false">
+                            <mutation component_type="NearField" set_or_get="set" property_name="ReadMode" is_generic="false" instance_name="NearField1"></mutation>
+                            <title name="COMPONENT_SELECTOR">NearField1</title>
+                            <title name="PROP">ReadMode</title>
+                            <value name="VALUE">
+                              <block type="logic_boolean">
+                                <title name="BOOL">TRUE</title>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" inline="false" x="1408" y="-759">
+    <title name="NAME">SetupMode</title>
+    <value name="VALUE">
+      <block type="logic_boolean">
+        <title name="BOOL">TRUE</title>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" inline="false" x="1413" y="-714">
+    <title name="NAME">BallPic</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">pingpongball.jpg</title>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" inline="false" x="1414" y="-663">
+    <title name="NAME">PlayResultVictoryText</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">Congratulations! You found the ball!</title>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" inline="false" x="598" y="-397">
+    <title name="NAME">PlayResultFailureText</title>
+    <value name="VALUE">
+      <block type="text">
+        <title name="TEXT">Sorry, try again</title>
+      </block>
+    </value>
+  </block>
+  <yacodeblocks ya-version="83" language-version="17"></yacodeblocks>
+</xml>

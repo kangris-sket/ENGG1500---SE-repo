@@ -1,0 +1,158 @@
+#|
+$Source $Yail
+|#
+
+(define-form appinventor.ai_michael_phox.cup_game.Screen1 Screen1)
+(require <com.google.youngandroid.runtime>)
+
+(def g$NFCBallText "ball")
+(def g$SetupInstruction2Text "Hold the phone over one of the tags")
+(def g$SetupInstruction1Text "Choose Place Cup or Place Bal to get started")
+(def g$SetupInstruction3Text "Press one of the buttons above to create another tag")
+(def g$QuestionPic "questionmark.png")
+(def g$CupPic "redcup.jpg")
+(def g$PlayInstructionText "Guess which tag hides the ball by holding the phone over one of them")
+(def g$PlayResultErrorText "I'm sorry, I don't recognize the tag that you've scanned, this tag said:   ")
+(def g$NFCCupText "cup")
+(def g$SetupMode #t)
+(def g$BallPic "pingpongball.jpg")
+(def g$PlayResultVictoryText "Congratulations! You found the ball!")
+(def g$PlayResultFailureText "Sorry, try again")
+;;; Screen1
+
+(do-after-form-creation (set-and-coerce-property! 'Screen1 'Title "Screen1" 'text)
+)
+
+(define-event Screen1 Initialize()(set-this-form)
+    (set-and-coerce-property! 'Image1 'Picture (get-var g$QuestionPic) 'text)(set-and-coerce-property! 'ResultsLabel 'Text "" 'text)(set-and-coerce-property! 'InstructionLabel 'Text (get-var g$SetupInstruction1Text) 'text))
+;;; MainMenuLabel
+
+(add-component Screen1 Label MainMenuLabel 
+(set-and-coerce-property! 'MainMenuLabel 'FontBold #t 'boolean)
+
+(set-and-coerce-property! 'MainMenuLabel 'FontSize 16 'number)
+
+(set-and-coerce-property! 'MainMenuLabel 'Text "Main Menu" 'text)
+
+)
+
+;;; MainMenuArrangement
+
+(add-component Screen1 HorizontalArrangement MainMenuArrangement 
+(set-and-coerce-property! 'MainMenuArrangement 'Width -2 'number)
+
+)
+
+;;; SetupModeButton
+
+(add-component MainMenuArrangement Button SetupModeButton 
+(set-and-coerce-property! 'SetupModeButton 'Text "Setup" 'text)
+
+(set-and-coerce-property! 'SetupModeButton 'Width -2 'number)
+
+)
+
+(define-event SetupModeButton Click()(set-this-form)
+    (set-and-coerce-property! 'Image1 'Picture (get-var g$QuestionPic) 'text)(set-and-coerce-property! 'ResultsLabel 'Text "" 'text)(set-and-coerce-property! 'InstructionLabel 'Text (get-var g$SetupInstruction1Text) 'text)(set-and-coerce-property! 'SetupMenuArrangement 'Visible #t 'boolean)(set-var! g$SetupMode #t))
+;;; PlayModeButton
+
+(add-component MainMenuArrangement Button PlayModeButton 
+(set-and-coerce-property! 'PlayModeButton 'Text "Play" 'text)
+
+(set-and-coerce-property! 'PlayModeButton 'Width -2 'number)
+
+)
+
+(define-event PlayModeButton Click()(set-this-form)
+    (set-and-coerce-property! 'Image1 'Picture (get-var g$QuestionPic) 'text)(set-and-coerce-property! 'ResultsLabel 'Text "" 'text)(set-and-coerce-property! 'InstructionLabel 'Text (get-var g$PlayInstructionText) 'text)(set-and-coerce-property! 'SetupMenuArrangement 'Visible #f 'boolean)(set-var! g$SetupMode #f)(set-and-coerce-property! 'NearField1 'ReadMode #t 'boolean))
+;;; SetupMenuArrangement
+
+(add-component Screen1 VerticalArrangement SetupMenuArrangement 
+(set-and-coerce-property! 'SetupMenuArrangement 'Width -2 'number)
+
+)
+
+;;; SetupMenuLabel
+
+(add-component SetupMenuArrangement Label SetupMenuLabel 
+(set-and-coerce-property! 'SetupMenuLabel 'FontBold #t 'boolean)
+
+(set-and-coerce-property! 'SetupMenuLabel 'Text "Setup Menu" 'text)
+
+)
+
+;;; SetupButtonArrangement
+
+(add-component SetupMenuArrangement HorizontalArrangement SetupButtonArrangement 
+(set-and-coerce-property! 'SetupButtonArrangement 'Width -2 'number)
+
+)
+
+;;; BallButton
+
+(add-component SetupButtonArrangement Button BallButton 
+(set-and-coerce-property! 'BallButton 'Text "Ball" 'text)
+
+(set-and-coerce-property! 'BallButton 'Width -2 'number)
+
+)
+
+(define-event BallButton Click()(set-this-form)
+    (set-and-coerce-property! 'InstructionLabel 'Text (get-var g$SetupInstruction2Text) 'text)(set-and-coerce-property! 'Image1 'Picture (get-var g$BallPic) 'text)(set-and-coerce-property! 'NearField1 'ReadMode #f 'boolean)(set-and-coerce-property! 'NearField1 'TextToWrite (get-var g$NFCBallText) 'text))
+;;; CupButton
+
+(add-component SetupButtonArrangement Button CupButton 
+(set-and-coerce-property! 'CupButton 'Text "Cup" 'text)
+
+(set-and-coerce-property! 'CupButton 'Width -2 'number)
+
+)
+
+(define-event CupButton Click()(set-this-form)
+    (set-and-coerce-property! 'InstructionLabel 'Text (get-var g$SetupInstruction2Text) 'text)(set-and-coerce-property! 'Image1 'Picture (get-var g$CupPic) 'text)(set-and-coerce-property! 'NearField1 'ReadMode #f 'boolean)(set-and-coerce-property! 'NearField1 'TextToWrite (get-var g$NFCCupText) 'text))
+;;; InstructionLabel
+
+(add-component Screen1 Label InstructionLabel 
+(set-and-coerce-property! 'InstructionLabel 'Text "-" 'text)
+
+)
+
+;;; ImageArrangement
+
+(add-component Screen1 HorizontalArrangement ImageArrangement 
+(set-and-coerce-property! 'ImageArrangement 'AlignHorizontal 3 'number)
+
+(set-and-coerce-property! 'ImageArrangement 'Width -2 'number)
+
+)
+
+;;; Image1
+
+(add-component ImageArrangement Image Image1 
+(set-and-coerce-property! 'Image1 'Picture "questionmark.png" 'text)
+
+(set-and-coerce-property! 'Image1 'Width 200 'number)
+
+(set-and-coerce-property! 'Image1 'Height 200 'number)
+
+)
+
+;;; ResultsLabel
+
+(add-component Screen1 Label ResultsLabel 
+(set-and-coerce-property! 'ResultsLabel 'Text "-" 'text)
+
+(set-and-coerce-property! 'ResultsLabel 'Width -2 'number)
+
+)
+
+;;; NearField1
+
+(add-component Screen1 NearField NearField1 
+)
+
+(define-event NearField1 TagWritten()(set-this-form)
+    (set-and-coerce-property! 'Image1 'Picture (get-var g$QuestionPic) 'text)(set-and-coerce-property! 'InstructionLabel 'Text (get-var g$SetupInstruction3Text) 'text)(set-and-coerce-property! 'NearField1 'ReadMode #t 'boolean))
+(define-event NearField1 TagRead($message)(set-this-form)
+    (if (call-yail-primitive yail-not (*list-for-runtime* (get-var g$SetupMode)) '(boolean) "not") (begin   (if (call-yail-primitive string=? (*list-for-runtime* (get-property 'NearField1 'LastMessage) (get-var g$NFCCupText)) '(text text) "text=") (begin   (set-and-coerce-property! 'Image1 'Picture (get-var g$CupPic) 'text)(set-and-coerce-property! 'ResultsLabel 'Text (get-var g$PlayResultFailureText) 'text)) (begin (if (call-yail-primitive string=? (*list-for-runtime* (get-property 'NearField1 'LastMessage) (get-var g$NFCBallText)) '(text text) "text=") (begin   (set-and-coerce-property! 'ResultsLabel 'Text (get-var g$PlayResultVictoryText) 'text)(set-and-coerce-property! 'Image1 'Picture (get-var g$BallPic) 'text)) (begin   (set-and-coerce-property! 'ResultsLabel 'Text (call-yail-primitive string-append (*list-for-runtime* (get-var g$PlayResultErrorText) (get-property 'NearField1 'LastMessage) ) '(text text ) "join") 'text)(set-and-coerce-property! 'Image1 'Picture (get-var g$QuestionPic) 'text))))))))
+(init-runtime)
